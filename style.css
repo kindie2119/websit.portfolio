@@ -1,140 +1,139 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  header {
-    background: #222;
-    color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    float: left;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  float: left;
+}
+
+.nav-links {
+  list-style: none;
+  float: right;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.hero {
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.btn {
+  background: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#about, #skills, #projects, #contact {
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #aaa;
+  text-align: center;
+}
+
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    float: right;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .menu-toggle {
     display: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
   }
-  
-  .hero {
-    background: linear-gradient(to right, #111, #333);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-  }
-  
-  .btn {
-    background: #f39c12;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  #about, #skills, #projects, #contact {
-    padding: 60px 20px;
-    background: #f4f4f4;
-  }
-  
-  .skills {
+
+  .nav-links.active {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
   }
-  
-  .project-list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .project-card {
-    flex: 1 1 30%;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #aaa;
-    text-align: center;
-  }
-  
-  form input, form textarea {
+
+  .menu-toggle {
     display: block;
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    float: right;
   }
-  
-  footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+
+  .skills {
+    flex-direction: column;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background: #333;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      width: 200px;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: block;
-      float: right;
-    }
-  
-    .skills {
-      flex-direction: column;
-    }
-  
-    .project-list {
-      flex-direction: column;
-    }
+
+  .project-list {
+    flex-direction: column;
   }
-  
+}
